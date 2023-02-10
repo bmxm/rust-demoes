@@ -34,7 +34,7 @@ impl<T> Container<T> {
 // 它是 impl 代码块的另一个特性，它允许你通过独立实现方法来专门化泛型
 impl Container<u32> {
     // 这里的 new 方法莫非是个 特殊函数 ？
-    // 返回值居然是个 Self ?
+    // 返回值居然是个 Sel
     fn sum(item: u32) -> Self {
         Container {item}
     }
@@ -43,7 +43,8 @@ impl Container<u32> {
 
 #[test]
 fn container_new_test() {
-   let _ = Container::new("hello");
+   let c = Container::new("hello");
+    println!("{}", c.item);
 }
 
 #[test]
@@ -59,8 +60,8 @@ fn vec_test() {
     v1.push(1);
 
     // 或者提供一种类型
-    let v2: Vec<u8> = Vec::new();
+    // let v2: Vec<u8> = Vec::new();
 
     // 或者使用 turbofish 符号
-    let v3 = Vec::<u8>::new();
+    // let v3 = Vec::<u8>::new();
 }

@@ -9,7 +9,10 @@ struct Point {
 #[test]
 fn main() {
     let (a, b) = (1, 2);
-    let Point{x, y} = Point{x: 3, y:4};
+    println!("{}", b);
+    assert_eq!(1, a);
 
-    assert_eq!(1, a)
+    let point = Point{x: 3, y:4};
+    println!("{}", point.x);
+    println!("{}", point.y);
 }
