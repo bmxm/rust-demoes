@@ -7,9 +7,9 @@
 // 通过对二进制文件执行 nm 命令，可以使用 pipe 和 grep 查找 give_me
 // 函数的前缀。
 
-fn give_me<T>(value: T) -> T {
-    value
-}
+// fn give_me<T>(value: T) -> T {
+//     value
+// }
 
 #[test]
 fn give_me_test() {
@@ -25,19 +25,17 @@ struct Container<T> {
 impl<T> Container<T> {
     // 这里的 new 方法莫非是个 特殊函数 ？
     // 返回值居然是个 Self ?
-    fn new(item: T) -> Self {
-        Container {item}
-    }
+    // fn new(item: T) -> Self {
+    //     Container {item}
+    // }
 }
 
 // 这里 impl 后面没有指定类型
 // 它是 impl 代码块的另一个特性，它允许你通过独立实现方法来专门化泛型
 impl Container<u32> {
-    // 这里的 new 方法莫非是个 特殊函数 ？
-    // 返回值居然是个 Sel
-    fn sum(item: u32) -> Self {
-        Container {item}
-    }
+    // fn sum(item: u32) -> Self {
+    //     Container {item}
+    // }
 }
 
 

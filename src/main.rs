@@ -4,9 +4,11 @@ mod generic_demo;
 mod trait_demo;
 mod pattern_destructure_demo;
 mod copy_demo;
+mod borrow_demo;
 
 // 用 mod 来声明要加载的其他代码文件，如果模块内容较多，可以放在一个目录下，在该目录下放一个 mod.rs 引入该模块的其他文件。
 // 这样处理后，就可以用 mod + 目录名引入这个模块了。
+
 
 fn main() {
     let result = if 1 == 1 {
